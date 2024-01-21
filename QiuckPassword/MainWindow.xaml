@@ -5,8 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QiuckPassword"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Quick Password" Height="400" Width="500" ResizeMode="NoResize"
+        Icon="/QiuckPassword;component/image/icon.ico"
+        >
+           
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF1C1C1C"/>
+            <GradientStop Color="#FF151515" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    
+    <Grid Height="390" VerticalAlignment="Top">
+
+        <Label x:Name="label_no_need" Content="Символы не нужны:&#xA;" HorizontalAlignment="Center" Margin="0,4,0,0" VerticalAlignment="Top" Height="38" Width="290" FontSize="26" Background="#00000000" Foreground="#FFE0E0E0" FontFamily="Sitka Small" FontWeight="Normal"/>
+
+        <TextBox x:Name="no_need_input" HorizontalAlignment="Center" Margin="0,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" Height="32" FontSize="18" Text="" Background="#FF252525" Foreground="Gainsboro">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="-45" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFCD98FB"/>
+                    <GradientStop Color="#FFAB4BFF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+
+        <Label x:Name="label_bind" Content="Бинд кнопки: " HorizontalAlignment="Center" Margin="0,89,0,0" VerticalAlignment="Top" Height="35" Width="184" FontSize="24" Background="#00000000" Foreground="#FFE0E0E0" FontFamily="Sitka Small" FontWeight="Normal"/>
+
+        <TextBox x:Name="bind_input" HorizontalAlignment="Center" Margin="0,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="34" FontSize="22" Text="" Background="#FF252525" Foreground="#FFECECEC">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="-45" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFCD98FB"/>
+                    <GradientStop Color="#FFBA6BFF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+
+        <Button x:Name="save_btn" Content="Сохранить" HorizontalAlignment="Center" VerticalAlignment="Top" Width="128" Height="40" FontSize="18" Background="#FF4BB96F" Margin="0,185,0,0" Foreground="#FFE0E0E0" BorderBrush="#00707070"/>
+
+        <Label x:Name="label_check_pass" Content="Проверка пароля" HorizontalAlignment="Center" Margin="0,275,0,0" VerticalAlignment="Top" Height="39" Width="230" FontSize="24" Background="#00000000" Foreground="#FFE0E0E0" FontFamily="Sitka Small" FontWeight="Normal"/>
+
+        <PasswordBox x:Name="check_pass_input" HorizontalAlignment="Center" Margin="0,314,0,0" VerticalAlignment="Top" Width="211" Height="28" Background="#FF252525" Foreground="#FFE6E6E6"/>
+
     </Grid>
 </Window>

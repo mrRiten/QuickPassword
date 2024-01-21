@@ -23,6 +23,7 @@ namespace QiuckPassword
         public MainWindow()
         {
             InitializeComponent();
+
         }
     }
 }
